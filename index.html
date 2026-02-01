@@ -1,0 +1,64 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome ✨</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .start-card {
+      background: var(--card);
+      padding: 2.2rem 2.4rem;
+      border-radius: 18px;
+      box-shadow: var(--shadow-strong);
+      text-align: center;
+      max-width: 560px;
+      width: 92%;
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+    }
+    .cta {
+      margin-top: 1.25rem;
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      padding: .9rem 1.2rem;
+      border-radius: 999px;
+      border: 0;
+      background: var(--accent);
+      color: white;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: var(--shadow-btn);
+      transition: transform .12s ease, filter .12s ease;
+    }
+    .cta:hover { transform: translateY(-1px); filter: brightness(1.05); }
+    .cta:active { transform: translateY(0); filter: brightness(.98); }
+    .heart { width: 22px; height: 22px; }
+    .sub { color: var(--muted); margin-top: .4rem; }
+  </style>
+</head>
+<body>
+  <div class="bg-hearts" aria-hidden="true"></div>
+  <main class="wrap">
+    <section class="start-card">
+      <h1>Welcome 💖</h1>
+      <p class="sub">A tiny site made with lots of love.</p>
+      <button class="cta" onclick="location.href='valentine.html'">
+        <svg class="heart" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 21s-6.716-4.393-9.428-7.105C.744 11.067.744 7.6 2.572 5.772c1.828-1.829 4.795-1.829 6.623 0L12 8.577l2.805-2.805c1.828-1.829 4.795-1.829 6.623 0 1.828 1.828 1.828 5.295 0 7.123C18.716 16.607 12 21 12 21z"/>
+        </svg>
+        Open the surprise
+      </button>
+    </section>
+  </main>
+  <script>
+    // Also allow clicking the background to continue (nice shortcut)
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Enter') location.href='valentine.html'; });
+  </script>
+</body>
+</html>
